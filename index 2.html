@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Искандер Нематов — Личный сайт</title>
+<meta name="description" content="Личный сайт Искандера Немaтова">
+<style>
+:root{
+  --bg:#090b10;
+  --card:rgba(255,255,255,.07);
+  --border:rgba(255,255,255,.12);
+  --text:#f5f7fb;
+  --muted:#a9afbd;
+  --accent:#7c5cff;
+  --accent2:#00d4ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 10%,rgba(124,92,255,.25),transparent 30%),
+    radial-gradient(circle at 85% 20%,rgba(0,212,255,.16),transparent 28%),
+    var(--bg);
+  min-height:100vh;
+}
+body:before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.025),transparent 70%);
+}
+.container{width:min(1050px,92%);margin:auto}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:10;
+  backdrop-filter:blur(18px);
+  background:rgba(9,11,16,.68);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.5px}
+nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}
+nav a:hover{color:#fff}
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding-top:70px;
+}
+.hero-content{max-width:800px}
+.badge{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:9px 14px;border:1px solid var(--border);
+  border-radius:999px;background:var(--card);color:#dce1ed;
+  font-size:14px;animation:fadeUp .7s ease both;
+}
+h1{
+  font-size:clamp(52px,10vw,105px);line-height:.92;
+  margin:25px 0 20px;letter-spacing:-5px;
+  background:linear-gradient(100deg,#fff 20%,#b9b0ff 55%,#7de9ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:fadeUp .8s .1s ease both;
+}
+.hero p{
+  color:var(--muted);font-size:19px;line-height:1.6;
+  max-width:650px;animation:fadeUp .8s .2s ease both;
+}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;animation:fadeUp .8s .3s ease both}
+.btn{
+  text-decoration:none;color:#fff;padding:13px 19px;border-radius:14px;
+  border:1px solid var(--border);background:var(--card);
+  transition:.25s;
+}
+.btn.primary{border:0;background:linear-gradient(110deg,var(--accent),#9a63ff)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+section{padding:90px 0}
+.section-title{font-size:38px;margin:0 0 28px;letter-spacing:-1.5px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{
+  padding:28px;border:1px solid var(--border);border-radius:24px;
+  background:var(--card);backdrop-filter:blur(14px);
+  transition:.25s;
+}
+.card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.22)}
+.icon{font-size:30px;margin-bottom:16px}
+.card h3{margin:0 0 8px;font-size:20px}
+.card p{margin:0;color:var(--muted);line-height:1.65}
+.highlight{
+  display:flex;align-items:center;gap:18px;
+  margin-top:25px;padding:22px;border-radius:20px;
+  background:linear-gradient(110deg,rgba(124,92,255,.18),rgba(0,212,255,.08));
+  border:1px solid var(--border)
+}
+.highlight strong{font-size:28px}
+footer{padding:35px 0 55px;color:var(--muted);text-align:center;font-size:14px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@media(max-width:650px){
+  nav a{display:none}
+  h1{letter-spacing:-3px}
+  .grid{grid-template-columns:1fr}
+  section{padding:65px 0}
+  .hero p{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="logo">И.Н.</div>
+    <div>
+      <a href="#about">Обо мне</a>
+      <a href="#education">Образование</a>
+      <a href="#achievements">Достижения</a>
+      <a href="#contacts">Контакты</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="badge">♒ Водолей · 18.02.2006</div>
+    <h1>Искандер<br>Нематов</h1>
+    <p>
+      Студент Казанского кооперативного института.
+      Специалитет — «Таможенное дело».
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#about">Узнать обо мне</a>
+      <a class="btn" href="#contacts">Социальные сети</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">Обо мне</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">👤</div>
+        <h3>Личные данные</h3>
+        <p>Искандер Нематов<br>Дата рождения: 18.02.2006<br>Знак зодиака: Водолей ♒</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>Учёба</h3>
+        <p>Казанский кооперативный институт<br>Специалитет — «Таможенное дело»</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Образование</h2>
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>Казанский кооперативный институт</h3>
+      <p>Студент направления «Таможенное дело», специалитет.</p>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="container">
+    <h2 class="section-title">Достижения</h2>
+    <div class="card">
+      <div class="icon">🏊‍♂️</div>
+      <h3>Плавание</h3>
+      <p>Пловец 2-го разряда.</p>
+      <div class="highlight">
+        <strong>II</strong>
+        <span>спортивный разряд по плаванию</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="container">
+    <h2 class="section-title">Социальные сети</h2>
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>@ufifiuu</h3>
+      <p>Моя социальная сеть</p>
+      <div class="buttons">
+        <a class="btn primary" href="https://instagram.com/ufifiuu" target="_blank" rel="noopener">Открыть профиль</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Искандер Нематов · Личный сайт
+</footer>
+
+</body>
+</html>
